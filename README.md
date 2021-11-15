@@ -22,24 +22,6 @@ Send following http message body via post to the endpoint `/proxy/call`
 By default the application comes with a handler to handle token-request responses of an oauth-authentification server, so that only the generated oauth-token is responded by this application.
 Handlers can be added to a HashMap of functional interfaces `org.dennis.proxy.controller.Handlers`. The handler must be a function expecting and responding a String Object.
 
-## Usage
-You can use this application by adding jitpack.io to your repositories:
-```
-<repositories>
-	<repository>
-		 <id>jitpack.io</id>
-		 <url>https://jitpack.io</url>
-	</repository>
-</repositories>
-```
-and adding this github repository as dependency:
-```
-<dependency>
-	<groupId>com.github.dennisgassner</groupId>
-	<artifactId>dockerproxy</artifactId>
-	<version>1.0</version>
-</dependency>
-```
 
 #
 To create a docker image usable in the [Pizza Scenario](https://github.com/dennisgassner/pizza-delivery) just build it via the simple way described by [Spring Boot](https://spring.io/guides/topicals/spring-boot-docker/), so docker build `--build-arg JAR_FILE=target/*.jar -t orgdennis/dockerproxy .`
